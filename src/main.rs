@@ -13,10 +13,10 @@ fn main() {
     println!("Got command: {command}");
 
     if command == "colorize" {
-        const R: &str = "\x1b[31m";
-        const G: &str = "\x1b[32m";
-        const Y: &str = "\x1b[33m";
-        const B: &str = "\x1b[34m";
+        const R: &str = "\x1b[41m";
+        const G: &str = "\x1b[42m";
+        const Y: &str = "\x1b[43m";
+        const B: &str = "\x1b[44m";
         const X: &str = "\x1b[0m";
 
         let stdin = io::stdin();
