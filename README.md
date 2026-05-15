@@ -19,5 +19,5 @@ seqkit seq -s somefile.fa | sek col | less -SiR
 *Colorize a sam file:*
 
 ```bash
-samtools view somefile.sam | sek sam | column -t | less -SiR
+samtools view --no-header somefile.sam | sek sam | column -t | less -SiR
 ```
