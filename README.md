@@ -3,6 +3,13 @@ SEK - The Sequence Exploration Kit
 
 An experimental toolkit for visualizing biological sequence features.
 
+The initial purpose of the toolkit is two-fold:
+
+1. For me to learn Rust, and in particular how to parse some common
+   bioinformatics formats with it.
+2. To scratch some of my own itches in terms of making it easier to navigate
+   some common file formats manually.
+
 ## Commands
 
 - `sek col`: Pipe DNA text to this command to have it colorized.
