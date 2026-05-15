@@ -55,13 +55,20 @@ fn cmd_sam_view() {
         let l = line.unwrap();
         if l.chars().nth(0) != Some('@') {
             let cols: Vec<&str> = l.split("\t").collect();
-            let mut newcols = cols[0..=8].to_vec();
 
-            let seq = vec![colorize(cols[9].to_string())];
-            let mut seq_str: Vec<&str> = seq.iter().map(|s| s.as_str()).collect();
-            newcols.append(&mut seq_str);
-            let output = newcols.join("\t");
-            println!("{output}")
+            if cols.len() >= 21 {
+                let mut newcols = cols[0..=8].to_vec();
+
+                let seq = vec![colorize(cols[9].to_string())];
+                let mut seq_str: Vec<&str> = seq.iter().map(|s| s.as_str()).collect();
+                newcols.append(&mut seq_str);
+
+                let restcols = cols[10..=20].to_vec();
+                newcols.extend(restcols);
+
+                let output = newcols.join("\t");
+                println!("{output}")
+            }
         }
     }
 }
